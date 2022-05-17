@@ -1,0 +1,375 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Validate the search box takes a maximum length of text for which it is designed",
+        "description": "",
+        "id": "searching-location;validate-the-search-box-takes-a-maximum-length-of-text-for-which-it-is-designed",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4646272200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on search screen",
+            "match": {
+              "location": "SearchDefs.userIsOnSearchScreen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3888824800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters the keyword \"Vietnam Abiera Abangay SantoTolosa Lamisahan Landang\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Vietnam Abiera Abangay SantoTolosa Lamisahan Landang",
+                  "offset": 25
+                }
+              ],
+              "location": "SearchDefs.userEntersTheKeyword(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "net.serenitybdd.core.exceptions.SerenityManagedException: expected:\u003c[\"50\"]\u003e but was:\u003c[52]\u003e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat com.backbase.assignment.steps.SearchSteps.verifyNumberOfCharacter(SearchSteps.java:25)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84.CGLIB$verifyNumberOfCharacter$6(\u003cgenerated\u003e)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84$$FastClassByCGLIB$$2664c338.invoke(\u003cgenerated\u003e)\r\n\tat net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)\r\n\tat net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)\r\n\tat net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)\r\n\tat net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:372)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:157)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84.verifyNumberOfCharacter(\u003cgenerated\u003e)\r\n\tat com.backbase.assignment.defs.SearchDefs.userIsUnableToEnterMoreThanCharactersIntoSearchBox(SearchDefs.java:51)\r\n\tat ✽.user is unable to enter more than \"50\" characters into search box(src/test/resources/features/Search.feature:8)\r\n",
+              "duration": 794000500,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "user is unable to enter more than \"50\" characters into search box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50",
+                  "offset": 35
+                }
+              ],
+              "location": "SearchDefs.userIsUnableToEnterMoreThanCharactersIntoSearchBox(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFunction"
+          },
+          {
+            "name": "@TC-02"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Validate search rules defined for  \"Start with\" the search key word",
+        "description": "",
+        "id": "searching-location;validate-search-rules-defined-for--\"start-with\"-the-search-key-word",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3831721100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is on search screen",
+            "match": {
+              "location": "SearchDefs.userIsOnSearchScreen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4357695400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters the keyword \"Aban\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Aban",
+                  "offset": 25
+                }
+              ],
+              "location": "SearchDefs.userEntersTheKeyword(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 710182900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "search result shows all cities that have the name start with \"Aban\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Aban",
+                  "offset": 62
+                }
+              ],
+              "location": "SearchDefs.searchResultShowsAllCitiesThatHaveTheNameStartWith(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1413192100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user views detail location of first city",
+            "match": {
+              "location": "SearchDefs.userViewsDetailLocationOfFirstCity()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFunction"
+          },
+          {
+            "name": "@TC-03"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Validate search rules when keyword starts with/ends with space",
+        "description": "",
+        "id": "searching-location;validate-search-rules-when-keyword-starts-with/ends-with-space;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3929966200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user is on search screen",
+            "match": {
+              "location": "SearchDefs.userIsOnSearchScreen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4010368000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the \"\u0027 Baak\u0027\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027 Baak\u0027",
+                  "offset": 17
+                }
+              ],
+              "location": "SearchDefs.userEntersThe(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "net.serenitybdd.core.exceptions.SerenityManagedException: expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat com.backbase.assignment.steps.SearchSteps.verifySearchResultStartWith(SearchSteps.java:29)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84.CGLIB$verifySearchResultStartWith$5(\u003cgenerated\u003e)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84$$FastClassByCGLIB$$2664c338.invoke(\u003cgenerated\u003e)\r\n\tat net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)\r\n\tat net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)\r\n\tat net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)\r\n\tat net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:372)\r\n\tat net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:157)\r\n\tat net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)\r\n\tat com.backbase.assignment.steps.SearchSteps$$EnhancerByCGLIB$$27e6cc84.verifySearchResultStartWith(\u003cgenerated\u003e)\r\n\tat com.backbase.assignment.defs.SearchDefs.searchResultShowsAllCitiesThatHaveTheNameStartWith(SearchDefs.java:40)\r\n\tat ✽.search result shows all cities that have the name start with \"Baak\"(src/test/resources/features/Search.feature:21)\r\n",
+              "duration": 10350917500,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "search result shows all cities that have the name start with \"Baak\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Baak",
+                  "offset": 62
+                }
+              ],
+              "location": "SearchDefs.searchResultShowsAllCitiesThatHaveTheNameStartWith(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFunction"
+          },
+          {
+            "name": "@TC-04"
+          },
+          {
+            "name": "@TC-05"
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "Validate search rules when keyword starts with/ends with space",
+        "description": "",
+        "id": "searching-location;validate-search-rules-when-keyword-starts-with/ends-with-space;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3811836100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user is on search screen",
+            "match": {
+              "location": "SearchDefs.userIsOnSearchScreen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3976377400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the \"\u0027Abu \u0027\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Abu \u0027",
+                  "offset": 17
+                }
+              ],
+              "location": "SearchDefs.userEntersThe(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 686676800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "search result shows all cities that have the name start with \"Baak\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Baak",
+                  "offset": 62
+                }
+              ],
+              "location": "SearchDefs.searchResultShowsAllCitiesThatHaveTheNameStartWith(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFunction"
+          },
+          {
+            "name": "@TC-04"
+          },
+          {
+            "name": "@TC-05"
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "Validate search rules defined for \"not case sensitive\"",
+        "description": "",
+        "id": "searching-location;validate-search-rules-defined-for-\"not-case-sensitive\"",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3798280100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user is on search screen",
+            "match": {
+              "location": "SearchDefs.userIsOnSearchScreen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4048265500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user enters the \"a dos\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "a dos",
+                  "offset": 17
+                }
+              ],
+              "location": "SearchDefs.userEntersThe(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 582731900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "search result shows all cities have the name starts with \"a dos\" ignore case",
+            "match": {
+              "arguments": [
+                {
+                  "val": "a dos",
+                  "offset": 58
+                }
+              ],
+              "location": "SearchDefs.searchResultShowsAllCitiesHaveTheNameStartsWithIgnoreCase(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SearchFunction"
+          },
+          {
+            "name": "@TC-06"
+          },
+          {
+            "name": "@TC-11"
+          }
+        ]
+      }
+    ],
+    "name": "Searching location",
+    "description": "",
+    "id": "searching-location",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Search.feature",
+    "tags": [
+      {
+        "name": "@SearchFunction",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

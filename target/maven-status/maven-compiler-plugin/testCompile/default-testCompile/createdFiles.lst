@@ -1,0 +1,4 @@
+com\backbase\assignment\defs\SearchDefs.class
+com\backbase\assignment\steps\SearchSteps.class
+com\backbase\assignment\DefinitionTestSuite.class
+com\backbase\assignment\pages\SearchPage.class

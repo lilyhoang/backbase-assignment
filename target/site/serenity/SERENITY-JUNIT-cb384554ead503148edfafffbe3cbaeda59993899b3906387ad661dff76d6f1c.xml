@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Searching location" skipped="0" tests="5" time="58.71" timestamp="2022-05-17 11:48:16"><testcase name="Validate the search box takes a maximum length of text for which it is designed"><failure message="expected:&lt;[&quot;50&quot;]&gt; but was:&lt;[52]&gt;" type="java.lang.AssertionError">expected:&lt;["50"]&gt; but was:&lt;[52]&gt;</failure><system-err>expected:&lt;["50"]&gt; but was:&lt;[52]&gt;&#13;
+com.backbase.assignment.steps.SearchSteps.verifyNumberOfCharacter(SearchSteps.java:25)&#13;
+com.backbase.assignment.defs.SearchDefs.userIsUnableToEnterMoreThanCharactersIntoSearchBox(SearchDefs.java:51)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Validate search rules defined for  &quot;Start with&quot; the search key word"/><testcase name="Validate search rules when keyword starts with/ends with space"><failure message="expected:&lt;[tru]e&gt; but was:&lt;[fals]e&gt;" type="java.lang.AssertionError">expected:&lt;[tru]e&gt; but was:&lt;[fals]e&gt;</failure><system-err>expected:&lt;[tru]e&gt; but was:&lt;[fals]e&gt;&#13;
+com.backbase.assignment.steps.SearchSteps.verifySearchResultStartWith(SearchSteps.java:29)&#13;
+com.backbase.assignment.defs.SearchDefs.searchResultShowsAllCitiesThatHaveTheNameStartWith(SearchDefs.java:40)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Validate search rules defined for &quot;not case sensitive&quot;"/></testsuite>

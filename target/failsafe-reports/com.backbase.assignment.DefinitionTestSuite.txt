@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.backbase.assignment.DefinitionTestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 61.364 s <<< FAILURE! - in com.backbase.assignment.DefinitionTestSuite
+Validate the search box takes a maximum length of text for which it is designed(Searching location)  Time elapsed: 10.324 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: expected:<["50"]> but was:<[52]>
+
+Validate search rules when keyword starts with/ends with space(Searching location)  Time elapsed: 18.991 s  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: expected:<[tru]e> but was:<[fals]e>
+

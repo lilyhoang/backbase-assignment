@@ -1,0 +1,11 @@
+Some tools are required to run test
+1. JDK
+2. Maven
+3. Appium
+4. SDK
+5. Virtual device or real device
+
+You can select 1 of 3 ways to run the test:
+1. Execute command mvn clean verify -Dcumcumber.options="--tags @SearchFunction"
+2. From IntelliJ, right-click on file src/test/resources/features/Search.feature, select "Run 'Feature: Search'"
+3. From IntelliJ, right-click on file src/test/java/com/backbase/assignment/DefinitionTestSuite.java, then select "Run 'DefinitionTestSuite'"
